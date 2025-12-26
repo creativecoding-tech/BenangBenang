@@ -15,7 +15,7 @@ class BezierCurve {
 
   // Warna dan style
   color strokeColor;
-  float strokeWeightVal = 3;
+  float strokeWeightVal = 10;
 
   // Constructor
   BezierCurve(float a1x, float a1y, float a2x, float a2y,
