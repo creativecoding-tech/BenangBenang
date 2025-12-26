@@ -2,7 +2,7 @@
 float cpx1 = 0, cpy1 = 0;
 float speedX = 10; // Arah dan kecepatan X
 float speedY = 10; // Arah dan kecepatan Y
-boolean isFirstFrame = true; // Flag untuk delay sekali di awal
+boolean isRunning = false; // Flag untuk toggle jalan/stop
 
 void setup(){
   fullScreen(P2D);
@@ -14,13 +14,14 @@ void setup(){
 }
 
 void draw(){
-  // Delay sekali saja saat pertama kali run
-  if (isFirstFrame) {
-    delay(1000); // Delay 2 detik di awal
-    isFirstFrame = false; // Set flag supaya tidak delay lagi
+  // Hanya jalan jika isRunning true
+  if (isRunning) {
+    createCurve();
   }
+}
 
-  createCurve();
+void mousePressed() {
+  isRunning = !isRunning; // Toggle state
 }
 
 void createCurve(){
