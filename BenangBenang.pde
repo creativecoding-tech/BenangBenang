@@ -2,10 +2,11 @@
 float cpx1 = 0, cpy1 = 0;
 float speedX = 10; // Arah dan kecepatan X
 float speedY = 10; // Arah dan kecepatan Y
+boolean isFirstFrame = true; // Flag untuk delay sekali di awal
 
 void setup(){
   fullScreen(P2D);
-  background(255);
+  background(0);
   strokeWeight(10);
   stroke(255, 102, 0);
   hint(ENABLE_STROKE_PURE);
@@ -13,6 +14,12 @@ void setup(){
 }
 
 void draw(){
+  // Delay sekali saja saat pertama kali run
+  if (isFirstFrame) {
+    delay(1000); // Delay 2 detik di awal
+    isFirstFrame = false; // Set flag supaya tidak delay lagi
+  }
+
   createCurve();
 }
 
