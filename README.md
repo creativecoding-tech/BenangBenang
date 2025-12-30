@@ -46,8 +46,6 @@ Project ini menggunakan:
 
 ## 📄 Lisensi
 
-Copyright © 2025.
-
 Proyek ini dilisensikan di bawah __Apache License 2.0__. Lihat file LICENSE untuk detail selengkapnya.
 
 ---
